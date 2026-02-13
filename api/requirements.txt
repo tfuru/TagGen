@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-sqlalchemy
-google-genai
-tenacity
-python-dotenv
-openai
