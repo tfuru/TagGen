@@ -1,0 +1,25 @@
+services:
+  watching:
+    build:
+      context: ./watching
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./watching:/app
+      - ./music:/music
+      - ./lib:/app/lib
+    env_file:
+      - .env
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "9000:8000"
+    restart: unless-stopped
+    volumes:
+      - ./api:/app
+      - ./music:/music
+      - ./lib:/app/lib
+    env_file:
+      - .env

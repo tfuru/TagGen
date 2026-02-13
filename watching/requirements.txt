@@ -1,0 +1,8 @@
+uvicorn
+google-genai
+python-dotenv
+watchdog
+mutagen
+sqlalchemy
+tenacity
+openai
